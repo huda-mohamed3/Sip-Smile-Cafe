@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gift Card</title>
+    <link rel="stylesheet" href="css/giftCard.css" />
+<link rel="icon" href="https://ekram-nafea.github.io/Sip-Smile-Cafe/imgs/hf2small_KfG_icon.ico"> 
+
+    <link rel="shortcut icon" href="imgs/hf2small.png" type="image/x-icon">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="nav-bar">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="imgs/hf2forwhite.png" alt="logo" class="logo" ></a>
+             </div>
+             <ul class="link">
+                <li><a href="giftCard.html" class="active">Buy gift card</a></li>
+                <li><a href="ReloadCard.html">Reload Card</a></li>
+                <li><a href="CheckBalance.html">Check balance</a></li>
+
+             </ul>
+             <i onclick="showSidebar()" id="menu" class="fa-solid fa-bars"></i>
+
+             <ul class="sidebar">
+               <li  id="times" onclick="hideSidebar()"><a ><i  id="times" class="fa-solid fa-times"></i></a></li>
+                <li><a class="active" href="giftCard.html">Buy gift card</a></li>
+                <li><a href="ReloadCard.html">Reload Card</a></li>
+                <li><a  href="CheckBalance.html">Check balance</a></li>
+             </ul>
+    
+
+
+        </nav>
+
+    </div>
+  
+    <div class="bg" id="giftCard" id="pa1">
+        <main>
+        
+            <div class="giftCard">
+            
+                <div class="hero-text">
+                    <h1>Give the Perfect Gift</h1>
+                    <p>Get a voucher for yourself or gift one to a friend</p>
+                </div>
+        <form id="checkout-form"  action="https://formspree.io/f/xovqzbld" method="post" target="_blank">
+            <input type="hidden" id="whatKindValue" name="What kind of gift is it?" value="For one individual">
+            <input type="hidden" id="buttonValue" name="buttonValue" value="$9.70"> 
+            <input type="hidden" id="emailAddreses" name="email Addreses" value=""> 
+
+                             
+                <div class="giftImgBtn">
+                        <div class="btn1" >
+                            <i  id="prevBtn" class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="giftImg">
+                        <img id="sliderImage" src="imgs/gift6.jpg" alt="ff"  class="nextImg"/>
+                        </div>
+                        <div class="btn1" >
+                            <i  id="nextBtn" class="fa-solid fa-circle-chevron-right"></i>
+
+                        </div>
+                </div>
+                <div class="smallGImg"> 
+                    <img  class="smallMargin"src="imgs/gift6.jpg" alt=""   onclick=' newImg(this.src); colors("#d1bda9");margin()'>
+                    <img  class="smallMargin"src="imgs/gift7.jpg" alt=""   onclick=' newImg(this.src); colors("rgb(108 126 56)");margin()'>
+                    <img class="smallMargin" src="imgs/giftexa.jpg" alt="" onclick=' newImg(this.src) ;colors("#ea286c") ;margin()' >
+                    <img class="smallMargin"  src="imgs/gift2.jpg" alt=""  onclick=' newImg(this.src); colors("#b07ddd");margin()' >
+                    <img  class="smallMargin"src="imgs/gift9.jpg" alt=""   onclick=' newImg(this.src); colors("rgb(92 165 187)");margin()'>
+
+                </div>
+            </div>  
+
+        <div class="whatKind">
+                <h2>What kind of gift is it?</h2>
+                <div class="giftBox" id="first"   onclick="whatkind('For one individual')">
+                    <div class="giftIco">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <div class="giftText">
+                        <h3>For one individual</h3>
+                        <p>Send a gift card to one recipient or make a bulk purchase</p>
+                    </div>
+                </div>
+
+                <div class="giftBox giftTextMulti"  onclick="whatkind('For multiple people')" >
+                    <div class="giftIco">
+                        <i class="fa-solid fa-gifts"></i>
+                    </div>
+                    <div class="giftText">
+                        <h3>For multiple people</h3>
+                        <p>Send gift cards to multiple people all at once</p>
+                    </div>
+                </div>
+                    <div class="giftBox giftTextGroup "  onclick="whatkind('Group gift card')">
+                        <div class="giftIco">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="giftText">
+                            <h3>Group gift card</h3>
+                            <p>Pool money from multiple contributors for one recipient</p>
+                        </div>
+                    </div>
+        </div>
+
+        
+
+            <div class="cardInfo">
+                <h2>eGift card amount</h2>
+                <p id="green">3% off</p>
+                <div class="giftBtn">
+                    <div class="allTest">
+
+                        <div class="card" id="cardOne"  >
+                            <button type="submit" id="button1" value="9.70" onclick="setButtonValue(this.value)" >
+                                <p >$10.00</p>
+                                <p >Pay $9.70</p>
+                        </button>
+                        </div>
+                        
+                        <div  class="card"  >
+                            <button  type="submit" id="button2"  value="19.40"  onclick="setButtonValue(this.value)">
+                                <p>$20.00</p>
+                                <p >Pay $19.40</p>
+                            </button>
+                        </div>
+                       <div class="card"   >
+                        <button  id="button3"  type="submit" value="24.25" onclick="setButtonValue(this.value)" >
+                            <p>$25.00</p>
+                            <p>Pay $24.25</p>
+                        </button>
+                      </div>
+                      <div class="card"   >
+                        <button  id="button4"  type="submit"   value="48.50" onclick="setButtonValue(this.value)" >
+                            <p>$50.00</p>
+                            <p >Pay $48.50</p>
+                        </button>
+                        </div>
+                      <div class="card"  id="cardCustom" >
+                        <button  id="button5" type="submit" onclick="setCustomValue()">
+                            <p>Custom</p>
+                            <p >Pay $0.00</p>
+                        </button>
+                      </div> 
+
+                 </div>
+
+                <div class="input">
+                </div>   
+             </div>
+         </div>
+            <p id="disCount">Add Discount Code</p>
+
+            
+            <div class="Delivery">
+
+
+                <h2> Delivery details</h2>
+                    <div class="sendboth">
+                        <div class="sendCard">
+                            <h3>Send this card to myself</h3>
+                        </div>
+                        <div class="sendIco">
+                            <i id="offOn" class="fa-solid fa-toggle-off"></i>
+                        </div>
+                    </div>
+                    <div class="sendbtn">
+                        <button class="phoneBtn" >Send by text</button>
+                        <button class="emailBtn">Send by email</button>
+                    </div>
+                    <div class="onHide">
+                    <input type="text" class="inputText"   placeholder="recipient name"  name="recipient-name"
+                    oninvalid="this.setCustomValidity('Please enter the recipient\'s name')"
+                    oninput="this.setCustomValidity('')"> 
+                    
+                    <input class="phoneNum"  type="tel" placeholder="recipient phone number"  name="recipient phone"  pattern="[0-9]{10}"
+                    oninvalid="this.setCustomValidity('Please enter a valid 10-digit phone number')"
+                    oninput="this.setCustomValidity('')"
+                    >
+
+                    <input class="email"  type="email" placeholder="recipient's email address" name="recipient-email" 
+                    oninvalid="this.setCustomValidity('Please enter a valid email address')"
+                    oninput="this.setCustomValidity('')">
+                    </div>
+                    <div id="textareaEmail"></div>
+                    <div class="counterEmail"></div>
+
+                    <div class="inputLabel">
+                        <input type="datetime-local"  name="delivery-date"   id="appointment"
+                        oninvalid="this.setCustomValidity('Please select a delivery date')"
+                        oninput="this.setCustomValidity('')" >
+                        <!-- -->
+                    </div>
+                    <div class="counterDateAll">
+                    </div>
+                    <div class="yourDetails">
+                        <h2>Your details</h2>
+                    <p id="nameEmailMessage">Your name, email, and message will be shared with the recipient.</p>
+
+                    <div>
+                        <input type="text" placeholder="Name"  name="sender-name" required
+                        oninvalid="this.setCustomValidity('Please enter your name')"
+                        oninput="this.setCustomValidity('')">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email address"  name="sender-email" required 
+                        oninvalid="this.setCustomValidity('Please enter a valid email address')"
+                        oninput="this.setCustomValidity('')" >
+                    </div>
+                    <div>
+                    <input class="yourPhone"  type="tel" placeholder="recipient phone number"  name='recipient phone' >
+                    </div>
+                    <div> 
+                        <textarea placeholder="Personal message (Optional)" name="Personal message"></textarea>
+                    </div>
+                    </div>
+                    <div class="checkoutP">
+                        <p>By selecting Checkout, you confirm that we may send a one-time text message to the mobile phone number entered above in order to deliver your eGift card. Please contact Sip & Smile directly for details about their privacy practices. Messages and data rates apply.</p>
+                    </div>
+
+                    <div class="Invite">
+                        <h2>Invite contributors (optional)</h2>
+                        <p>Send an email inviting others to contribute to this gift. You'll also get a share link after checkout.</p>
+                        <div> 
+                            <textarea type="email" placeholder="Contributors email addresses (50 people max,separated by commas)"></textarea>
+                        </div><div> 
+                            <textarea placeholder="Invitation message"></textarea>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Suggested amount to contribute" >
+                        </div>
+
+
+                    </div>
+                     
+                    <button class="checkout" type="submit">Checkout</button>
+
+                
+                </form>
+                <div class="policy">
+                    <p>Powered by <a href="#">AHE</a></p>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                
+
+            </div>
+
+        </main>
+</div>
+
+
+   <script src="js/script2.js"></script>
+  </body>
+</html>

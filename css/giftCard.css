@@ -1,0 +1,1243 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav-bar{
+    border-bottom: 1px solid #dfdfdf;
+    background-color: #fff;
+}
+nav{
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+nav ul li {
+    display: inline;
+    list-style: none;
+
+  }
+  nav ul:not(.sidebar) li a {
+    text-decoration: none;
+    color: #71767b;
+    padding: 5px 16px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  nav ul:not(.link) li a{
+    font-size: 20px;
+    text-decoration: none;
+   
+    color: #71767b;
+
+    padding: 5px 16px;
+    font-weight: bold;
+  }
+  nav ul li a:hover{
+    color: #000;
+   
+  }
+
+  nav ul li a.active{
+    color: #000;
+   
+  }
+  nav ul:not(.link) li a.active{
+    color: #000;
+   
+  }
+ 
+  nav ul li:not(#hideOnMobile):not(#times):hover:after {
+    width: 100%;
+  }
+  
+  i:hover {
+    color: #71767b;
+
+  }
+
+  #menu {
+    display: none;
+    font-size: 25px;
+  }
+  #times {
+    margin-top: 20px;
+    font-size: 35px;
+    color:#000;
+
+  }
+  #times:hover{
+    color: #71767b;
+
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color:  #fdfcf9a8;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sidebar li {
+    width: 65%;
+    margin: 30px 20px 0 20px;
+    padding-bottom: 30px
+  }
+  .sidebar li:not(#times) {
+    border-bottom: 1px solid #7f350436;
+    
+  }
+  .sidebar a {
+    width: 100%;
+
+  }
+  
+
+.logo {
+    width: 100px;
+
+  }
+  .logo img {
+    width: 120px;
+  }
+
+main{
+
+   width: 480px; 
+   margin: auto;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.giftCard{
+    position: relative;
+
+}
+.bg{
+    background-color: #d1bda9;
+    height: 300px;
+}
+.hero-text{
+    padding: 36px;
+    text-align: center;
+    color: #fff;
+    font-family:cursive;
+    line-height: 1.4;
+   
+
+}
+.hero-text h1{
+    font-weight: 100;
+    font-size: 36px;
+}
+.hero-text p{
+    padding-top: 8px;
+}
+/* .btn1 {
+    border: 2px solid #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+} */
+.giftImgBtn i {
+    font-size: 60px;
+    color: #fff;
+    align-items: center;
+    cursor: pointer;
+}
+.giftImgBtn i:hover{
+    color: #fffefd;
+    color: #ffffff79;
+
+}
+.giftImgBtn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.giftImg img{
+    width: 324px;
+    height: 204px;
+    border-radius: 5px;
+    object-fit:cover; 
+}
+.smallGImg{
+    position: absolute;
+    left: 28.5%;
+    margin-top: 15px;
+}
+
+.smallGImg img{
+    width: 38px;
+    height: 38px;
+}
+
+img.smallMargin:active{
+    transform:translateY(-20%);
+}
+.whatKind h2{
+    padding-bottom: 16px;
+   font-size: 19px;
+   
+}
+.sendIco i{
+    font-size: 35px;
+ 
+   color: #b2b2b2;
+
+  
+}
+.sendIco i:hover{
+    color: #006aff;
+}
+.sendbtn button{
+    background-color: #fff;
+    border: none;
+box-shadow: 2px 1px 2px rgba(133, 131, 131, 0.6);
+    border-radius: 5px;
+    width: 237px;
+    padding: 10px;
+    font-size: 16px;
+}
+.sendbtn{
+    width: 98.5%;
+    height: 38px;
+    margin: 8px 0px;
+    padding: 4px 3px 5px 4px ;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+}
+input {
+    width: 93%;
+    height: 40px;
+    padding: 6px 16px;
+    margin: 6px 0;
+    outline: none;
+    border: 1px solid #00000028;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 17px;
+    color:#43494f;
+}
+input::placeholder{
+    color:#aeb1b5;
+
+}
+/* .email{
+    display: none;
+   
+} */
+
+.email, .yourPhone {
+    display: none;
+}
+textarea {
+    width: 93%;
+    height: 70px;
+    padding: 20px 16px;
+    margin: 6px 0;
+    outline: none;
+    border: 1px solid #00000028;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 17px;
+    color: #43494f;
+}
+.counterDate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 20px;
+}
+.counter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    border: 1px solid #00000028;
+    text-align: center;
+    width: 50%;
+    height: 59px;
+    border-radius: 5px;   
+}
+.counter:hover,.counter:focus{
+    
+    border: 2px solid #006aff;
+}
+.dateBorder:hover{
+    border: 2px solid #006aff;
+    color: violet;
+
+}
+.dateBorder:focus {
+    border: 2px solid #006aff;
+
+}
+
+button {
+    font-size: 20px;
+    padding: 0 8px;
+    
+}
+.display {
+    font-size: 18px;
+    width: 50px;
+    text-align: center;
+}
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.dateBorder{
+    border: 1px solid #00000028;
+    text-align: center;
+    width: 50%;
+    height: 60px;
+    padding:0 5px;
+    border-radius: 5px;
+   font-size: 14px;
+
+}
+
+
+.dateBorder input{
+  border: none;
+  outline: none;
+  padding-left: 1px;
+  font-size: 14px;
+
+  
+}
+.dateBorder input::before{
+   content: 'Delivery details';
+   line-height: 2;
+   font-weight: lighter;
+
+ 
+}
+#displayEmail{
+   color: #6f6a6ace; 
+}
+#counterEmail{
+    background-color: #f1f1f1;
+    border: none;
+}
+/* ********************************** */
+.whatKind{
+    padding-top: 20%;
+}
+
+.giftBox{
+    display: flex;
+    border: 1px solid #00000055 ;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 18px 16px;
+    margin: 8px 0 0;
+    
+}
+ 
+.giftIco{
+    padding: 0 12px 0 0;
+}
+.giftText p{
+    padding-top:5px ;
+    color: rgba(0, 0, 0, .55);
+}
+.cardInfo {
+    padding-top: 32px;
+}
+.cardInfo h2 {
+    padding-bottom: 18px;
+    font-size: 19px;
+    font-weight: bold;
+}
+#green{
+    color: green;
+    padding-bottom: 10px;
+}
+.cardInfo button{
+    all: unset;
+    border: 1px solid #1f1b1b53;
+    padding: 17px 12.32px;
+    text-align: center;
+    border-left:none;
+    font-size: 17px;
+}
+.cardInfo button:first-child{
+    border-left:1px solid #1f1b1b34;
+}
+
+.allTest{
+    display:flex ;
+    
+}
+.card   {
+    cursor: pointer;
+}
+
+.card  button p:nth-of-type(2) {
+    color: rgb(10, 164, 10);
+    font-size: 12px;
+    width: 70px;
+
+  }  
+
+  #cardOne{
+background-color: #32373c;
+color: #fff;
+
+  }
+  
+
+
+ #disCount{
+    color: #006aff;
+    padding: 20px 0;
+    font-size: 14px;
+    cursor: pointer;
+
+}
+.Discount{
+    height: 48px;
+    width: 92%;
+    padding: 0 16px;
+    color: #000;
+    
+    
+    
+}
+.divDiscout{
+    position: relative;
+
+}
+
+.dicountBtn{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: 0 0;
+    border: none;
+    font-size: 16px;
+    color: #006aff45;
+   
+}
+.sendCard h3{
+    font-size: 16px;
+}
+.customInput{
+    height: 48px;
+width: 92%;
+padding: 0 16px;
+color: #000;
+
+
+}
+.customP{
+    font-size: 12px;
+    margin: 5px;
+    color: #43494fac;
+    
+}
+.Delivery h2{
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.sendboth{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    width: 97%;
+    
+}
+.sendboth:hover {
+    background-color: #E6F0FF;
+}
+
+.inputLabel{
+    padding-bottom: 19px;
+}
+.inputLabel input::before{
+    content: "Delivery Date";
+    color: #000;
+    line-height: 1.6;
+    font-size: 15px;
+}
+.inputLabel input{
+    color: #7d7b7b;
+    padding: 10px 16px;
+
+    
+}
+.inputLabel input:hover{
+    border: 1.55px solid #006aff;
+}
+.yourDetails{
+padding-bottom: 30px;
+padding-top: 20px;
+}
+
+
+
+
+
+#nameEmailMessage{
+    display: none;
+    color: #414549;
+    padding-bottom: 22px;
+}
+textarea{
+    width: 93%;
+    height: 70px;
+    padding: 20px 16px;
+    margin: 6px 0;
+    outline: none;
+    border: 1px solid #00000028;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 17px;
+    color:#43494f;
+
+
+}
+textarea::placeholder{
+    color:#aeb1b5;
+}
+.checkoutP p{
+    color: #43494f;
+    font-size: 12.5px;
+    padding: 6px 0;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 488px;
+}
+.checkout{
+    all: unset;
+    width: 93%;
+    height: 25px;
+    padding: 11px 18px;
+    text-align: center;
+   font-size: 18px;
+   color: #fff;
+   border-radius: 5px;
+   font-weight: bold;
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: #006aff;
+
+}
+.policy{
+    text-align: center;
+    align-items: center;
+    padding: 43px 0;
+    color: #aeb1b5;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+    font-size: 12px;
+}
+.policy a{
+
+    color: #aeb1b5;
+
+}
+
+
+/* .yourPhone{
+    display: none;
+} */
+
+.Invite h2{
+font-size: 19px;
+}
+.Invite p{
+  margin-bottom: 20px;
+  font-weight: 200;
+  line-height: 1.4;
+  color: #414549;
+
+}
+.Invite ::placeholder{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    font-size: 16px;
+    
+}
+.Invite{
+    display: none;
+}
+
+.Invite input{
+    margin-bottom: 20px;
+    height: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+  }
+  .Invite textarea:first-child{
+    height: 77px;
+
+    
+  }
+  /* **************************** Reloadcard ************************************ */
+#h2{
+    font-size: 22px;
+   padding: 20px 0;
+   margin: 10px 0 0;
+
+  }
+  .NumberPIN label{
+    font-size: 13px;
+   text-transform: uppercase;
+   font-family: Arial, Helvetica, sans-serif;
+   color:#43494fe5;
+   font-weight: 600;
+   
+  }
+  .Number{
+    width: 356.4px;
+    
+
+  }
+  
+  .NumberPIN{
+    display: flex;
+    height: 94.2px;
+   
+  }
+  .NumberPIN input{
+    padding: 0 16px;
+    height: 48px;
+
+  }
+
+  .Number input{
+    width: 314px;
+  }
+  .PIN{
+    width: 131px;
+  }
+  .PIN input{
+    width: 97.9px;
+    
+  }
+  .checkbox{
+    display: flex;
+    align-items: center;
+    height: 52px;
+   
+  }
+ 
+  .checkboxInput input{
+    width: 22.4px;
+    height: 22.4px;
+    margin: 0 12px 0 0;
+    cursor: pointer;
+  }
+  input[type='checkbox']:checked {
+    accent-color: blue;
+     
+}
+.checkboxLabel{
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #71767b;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.yield-button {
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background: 0 0;
+    margin: 0 0 16px;
+    padding: 0;
+    
+}
+.yield-button:disabled {
+    cursor: not-allowed
+
+}
+.balanceButton{
+
+position: relative;
+top: 15px;
+}
+.balanceButton .yield-button:disabled {
+    color: #006aff;
+    opacity: 1; 
+   
+}
+.continue{
+    width: 100%;
+    height: 48px;
+   padding: 0 16px;
+   margin-top: 40px;
+   border: none;
+   background-color: #006aff;
+   border-radius: 5px;
+   color: #fff;
+}
+.continue:disabled {
+    cursor: not-allowed;
+    background-color: #c9ced1;
+    color: #eee;
+}
+#PIN:disabled{
+   color: #c4c4c4;
+   background-color: #fafafa;
+}
+
+
+.hideOnMobile {
+    display: none;
+  }
+  #hideOnMobile {
+    display: none;
+  }
+
+  
+  /* ***************************************@media ************************************************************ */
+
+  @media only screen and (min-width: 536px)   {
+
+    main {
+      width: 488px;
+    }
+   
+  }
+  @media only screen and (max-width: 596px)   {
+    #menu {
+        display: block;
+      }
+      .link{
+         display: none;
+      }
+  }
+
+  @media only screen and (max-width: 536px)   {
+    #menu {
+ 
+        display: block;
+      }
+      .link{
+         display: none;
+      }
+    .sidebar {
+        width: 100%;
+      }
+      .sendbtn button {
+        /* width: 191px; */
+        width: 233px;
+    }
+    }
+
+
+  @media (max-width:  500px )and (min-width: 410px) {
+   
+
+    main {
+        width: 400.6px;
+      }
+       .hero-text {
+        padding: 36px 0px;
+      }
+      .hero-text h1{
+        font-size: 24px;
+      }
+  
+    .giftImgBtn i {
+        font-size: 40px;
+    }
+    .giftImgBtn{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+       
+    }
+    .giftImg img{
+        width: 244.8px;
+        height: 154.8px;
+       
+    }
+    .smallGImg{
+        position: absolute;
+        left: 30.7%;
+        margin-top: 15px;
+
+    }
+ 
+    .smallGImg img{
+        width: 33.6px;
+        height: 33.6px;
+    }
+
+    .allTest{
+        flex-direction: column;
+     
+    }
+    
+    .cardInfo button{
+        width: 99%;
+        height: 39.8px;
+        padding: 15px 0;
+        
+    }
+    .card button p:nth-of-type(2){
+        width: 100%;
+    }
+
+   
+   .sendbtn button {
+    width: 191px;
+} 
+
+
+    input {
+        width: 90%;
+        height: 48px;
+        padding: 6px 16px;
+       
+    }
+    textarea {
+        width: 90%;
+        height: 70px;
+      
+    }
+    .dateBorder {
+        height: 66px;
+    }
+  
+    .checkoutP p{
+        width: 400px;
+    } 
+    .sendboth{
+        width: 95%;
+    }
+    .sendbtn{
+        width: 97%;
+    }
+
+   
+      .NumberPIN{
+        flex-direction: column;
+        padding-bottom: 20px;
+        
+       }
+       .Number {
+        width: 98%;
+      }
+      .Number input{
+        width: 87%;
+      }  
+       .PIN{
+         width: 98%;
+     
+       }
+       .pinIco{
+         padding-top: 15px;
+         width: 86%;
+       }
+     
+       #PIN{
+         width: 87%;
+        
+       }
+ 
+       
+ .checkbox {
+     margin-bottom: 10px; 
+     margin-top:15px;
+     position: relative;
+     top: 47px; 
+ }
+ .balanceButton{
+top: 45px;
+margin-bottom: 15px; 
+
+ }
+  }
+
+
+  @media (max-width:410px )and (min-width:330px) {
+    main {
+        width: 300px;
+       
+      }
+    .hero-text {
+        padding: 36px 0px;
+      }
+      .hero-text h1{
+        font-size: 24px;
+      }
+    
+
+      .giftImg img{
+        width: 200px;
+        height: 140px;
+        margin: 0 10px;
+       
+    }
+
+    .giftImgBtn i {
+        font-size: 30px;
+        
+    
+    } 
+    .giftImgBtn{
+        align-items: center;
+         
+     }
+     .smallGImg{
+    
+        left: 23%;
+    
+
+    }
+     .smallGImg img{
+        width: 29px;
+        height: 29px;
+    }
+    .customInput{
+        width: 89%;
+    }
+    .Discount{
+    
+        width: 89%;
+    }
+      .allTest{
+        flex-direction: column;
+     
+    }
+
+    .dateBorder input{
+        font-size: 11px;
+        padding: 0;
+    }
+    .dateBorder{
+        height: unset;
+        width: 55%;
+    }
+    .counterDate{
+        justify-content: unset;
+        gap: 10px;
+        width: 104%;
+
+    }
+    .display{
+        font-size: 14px;
+    }
+    .counter{
+        gap: 0;
+        width: 45%;
+        height: 50px;
+    }
+    .counter button{
+        font-size: 11px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+      .cardInfo button{
+        width: 99%;
+        height: 39.8px;
+        padding: 15px 0;
+        
+    }
+ 
+    .card button p:nth-of-type(2){
+        width: 100%;
+    }
+    .sendbtn button {
+        width:150px;
+    } 
+    
+.sendbtn {
+    width: 102%;
+}
+    .sendboth{
+        width: 98%;
+    }
+    .checkoutP p{
+        width: 99%;
+    } 
+    
+    .NumberPIN{
+        flex-direction: column;
+        padding-bottom: 20px;
+        
+        
+       }
+       .Number {
+        width: 98%;
+      }
+      .Number input{
+        width: 87%;
+      }  
+       .PIN{
+         width: 98%;
+     
+       }
+
+    .pinIco{
+        padding-top: 15px;
+        width: 86%;
+      }
+    
+      #PIN{
+        width: 87%;
+       
+      }
+
+      
+      .checkbox {
+        margin-bottom: 10px; 
+        margin-top:15px;
+        position: relative;
+        top: 47px; 
+    }
+    .balanceButton{
+   top: 45px;
+   margin-bottom: 15px; 
+   
+    }
+    
+  }
+  @media (max-width:335px ) {
+
+    main {
+        width: 220px;
+       
+      }
+    .hero-text {
+        padding: 36px 0px;
+        width: 233px;
+      }
+      .hero-text h1{
+        font-size: 22px;
+        text-align: start;
+      }
+      .hero-text p{ 
+       font-size: 14px; 
+       text-align: center;
+       
+     } 
+     .giftImg img{
+        width: 200px;
+        height: 140px;
+        margin: 0 10px;
+       
+    }
+
+    .giftImgBtn i {
+        font-size: 30px;
+        
+    
+    }  
+     .giftImgBtn{
+    justify-content: center;
+         
+     }
+     .smallGImg{
+        left: 16.5%;
+        
+    }
+
+    .smallGImg img{
+        width: 25px;
+        height: 25px;
+    }
+    .whatKind h2{
+        margin-top: 20px;
+    }
+    .giftText h3 {
+        font-size: 16px;
+    }
+    .giftText p {
+        font-size: 14px;
+    }
+    .customInput {
+        width: 85%;
+    }
+    .Discount{
+    
+        width: 85%;
+    }
+    .allTest{
+        flex-direction: column;
+     
+    }
+      .cardInfo button{
+        width: 99%;
+        height: 39.8px;
+        padding: 15px 0;
+        
+    }
+ 
+    .card button p:nth-of-type(2){
+        width: 100%;
+    }
+    .cardInfo button{
+    font-size: 15px;
+    }
+    .sendbtn{
+        width: 104%;
+        height: 33px;
+
+    }
+    .sendbtn button {
+        width: 112px;
+        font-size: 12px;
+        
+    } 
+    .sendboth{
+        width: 100%;
+    }
+   
+    .Delivery h2{
+        font-size: 17px;
+    }
+    .sendCard h3{
+        font-size: 12px;
+    }
+    .sendIco i{
+        font-size: 25px;
+    }
+    input{
+        font-size: 13px;
+    }
+    .inputLabel input::before{
+        font-size: 12px;
+    }
+    .display{
+        font-size: 14px;
+    }
+    .counter{
+        gap: 0;
+        width: 45%;
+        height: 50px;
+    }
+    .counter button{
+        font-size: 11px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .dateBorder input{
+        font-size: 11px;
+        padding: 0;
+    }
+    .dateBorder{
+        height: unset;
+    }
+.dateBorder input::before{
+    line-height: 1;
+}
+.counterDate{
+    justify-content: unset;
+    gap: 10px;
+}
+textarea{
+    font-size: 13px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Invite textarea:first-child::placeholder{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.Invite input::placeholder{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#nameEmailMessage{
+    width: 107%;
+    font-size: 15px;
+}
+.Invite p {
+    width: 107%;
+    font-size: 14px
+}
+.checkout {
+    font-size: 15px;
+}
+.checkoutP p{
+    width: 107%;
+    font-size: 11px;
+}
+.yourDetails{
+    padding-bottom: 15px;
+}
+
+.NumberPIN{
+    flex-direction: column;
+    padding-bottom: 20px;
+    
+   }
+   .Number {
+    width: 98%;
+  }
+  .Number input{
+    width: 87%;
+  }  
+   .PIN{
+     width: 98%;
+ 
+   }
+   .pinIco{
+    padding-top: 15px;
+    width: 86%;
+  }
+
+  #PIN{
+    width: 87%;
+   
+  }
+
+  
+  .checkbox {
+    margin-bottom: 10px; 
+    margin-top:15px;
+    position: relative;
+    top: 47px; 
+}
+.balanceButton{
+top: 45px;
+margin-bottom: 15px; 
+
+}
+#h2{
+    text-align: center;
+    font-size: 20px;
+}
+.checkbox{
+width: 100%;
+}
+.checkboxLabel label{
+font-size: 12.5px;
+
+
+}
+    
+  }
+
+
+  
